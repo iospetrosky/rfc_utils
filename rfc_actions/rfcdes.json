@@ -1,0 +1,5 @@
+{
+  "tabname": "RFCDES",
+  "tabfields": "RFCDEST",
+  "filters": ["RFCDEST LIKE '%SEC'","RFCDEST LIKE '3%'"]
+}

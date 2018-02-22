@@ -1,0 +1,5 @@
+{
+  "tabname": "ZGTCNNPRFC",
+  "tabfields": "ZRFCNAM,ZSYST,ZSTATS,ZCLIENT",
+  "filter": "ZCLIENT NE '000'"
+}

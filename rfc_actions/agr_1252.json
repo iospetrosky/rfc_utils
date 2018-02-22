@@ -1,0 +1,5 @@
+{
+  "tabname": "AGR_1252",
+  "tabfields": "AGR_NAME,VARBL,LOW,HIGH",
+  "filters": ["AGR_NAME LIKE 'R:%' AND VARBL EQ '$VKORG'","AGR_NAME LIKE 'R:%' AND VARBL EQ '$IWERK'"]
+}

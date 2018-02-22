@@ -1,0 +1,5 @@
+{
+  "tabname": "ZGTCN_RFC_DEST",
+  "tabfields": "ZSYSTM,ZDESCP,ZACTIV,ZRFCDT",
+  "filter": "*"
+}

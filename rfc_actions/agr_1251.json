@@ -1,0 +1,5 @@
+{
+  "tabname": "AGR_1251",
+  "tabfields": "AGR_NAME,OBJECT,FIELD,LOW,HIGH",
+  "filters": ["AGR_NAME LIKE 'Y:%' AND DELETED NE 'X'"]
+}

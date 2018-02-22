@@ -1,0 +1,5 @@
+{
+  "tabname": "USR02",
+  "tabfields": "BNAME,CLASS",
+  "filter": "CLASS EQ 'ENDUSER'"
+}

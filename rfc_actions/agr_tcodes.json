@@ -1,0 +1,5 @@
+{
+  "tabname": "AGR_TCODES",
+  "tabfields": "AGR_NAME,TCODE",
+  "filters": ["AGR_NAME LIKE '%:XX%' AND DIRECT EQ 'X'"]
+}

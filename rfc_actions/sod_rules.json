@@ -1,0 +1,45 @@
+{
+"rules":
+    [
+        {
+          "tabname": "GRACFUNCACT",
+          "tabfields": "FUNCTID,ACTION,CONNECTOR",
+          "__filters": ["CONNECTOR EQ 'ALL_ECC' AND ACTIVE EQ 'X'"],
+          "filters": ["ACTIVE EQ 'X'"]
+        },
+        {
+          "tabname": "GRACACTRULE",
+          "tabfields": "RISKID,ACTRULEID,FUNCTID,CONNECTOR,ACTION",
+          "__filters": ["CONNECTOR EQ 'ALL_ECC'"]
+        },
+        {
+          "tabname": "GRACBPROCT",
+          "tabfields": "BPROC,DESCN",
+          "filters": ["LANGU EQ 'EN'"]
+        },
+        {
+          "tabname": "GRACFUNCT",
+          "tabfields": "FUNCTID,DESCN",
+          "filters": ["LANGU EQ 'EN'"]
+        },
+        {
+          "tabname": "GRACFUNC",
+          "tabfields": "FUNCTID, BZPRCID, SCOPE"
+        },
+        {
+          "tabname": "GRACSODRISKT",
+          "tabfields": "RISKID,DESCN",
+          "filters": ["LANG EQ 'EN'"]
+        },
+        {
+          "tabname": "GRACSODRISK",
+          "tabfields": "RISKID,RISKLEVEL,BZPRCID,RISKTYPE",
+          "filters": ["ACTIVE EQ 'X'"]
+        },
+        {
+          "tabname": "GRACRULESETT",
+          "tabfields": "RULESETID,DESCN",
+          "filters": ["LANGU EQ 'EN'"]
+        }
+    ]
+}
