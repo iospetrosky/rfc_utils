@@ -26,7 +26,7 @@ class my_pdo extends PDO {
 		}
 	}
 
-	function lastInsertId() {
+	function lastInsertId($seq = NULL) {
 		if ($this->engine == 'odbc') {
 			// not supported function in driver
 			return -1;
@@ -135,7 +135,7 @@ class my_pdo extends PDO {
 		}
 	}
 
-	function column($sql,$field) {
+	function column($sql,$field = 'P1') {
 	/*
 	restitusce sotto forma di array il contenuto della colonna FIELD della
 	query indicata in SQL. Usare per query piccole perchÃ© si passa tutti i
@@ -149,7 +149,7 @@ class my_pdo extends PDO {
 		return $ret;
 	}
 
-	function query_field($sql,$field) {
+	function query_field($sql,$field = 'P1') {
 	/*
 	restituisce il valore del campo FIELD della query indicata in SQL
 	*/
@@ -250,7 +250,7 @@ class my_pdo extends PDO {
 	}
 
 	function delete_one($table, $kval, $key = 'id') {
-		// in realta'� ONE si riferisce al fatto che specifico un solo valore
+		// in realta'� ONE si riferisce al fatto che specifico un solo valore
 		// cancella di fatto tutti i record che corrispondono alla condizione
 		$sql = "DELETE FROM $table WHERE $key = '{$kval}'";
 		//echo $sql;

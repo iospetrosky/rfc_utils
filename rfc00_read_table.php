@@ -58,7 +58,7 @@ foreach($actions->rules as $action) {
     /*
      * Maybe there's a misunderstanding here, or may be a feature
      * to be implemented. Each filter causes a different call, so
-     * right now filter are uses to download different sets of data
+     * right now filter are used to download different sets of data
      * from a specific table.
      * It is NOT a way to combine filters that are longer than 40 chars
      */
@@ -143,7 +143,10 @@ function make_insert_sql($table,$tfields,$wa) {
 	$values = array();
 	foreach ($tfields as $field) {
 		$fields[] = $field['FIELDNAME'];
-		$values[] = trim(substr($wa,$field['OFFSET'],$field['LENGTH']));
+        $values[] = trim(substr($wa,$field['OFFSET'],$field['LENGTH']));
+        for ($k=0; $k<count($values); $k++) {
+            $values[$k] = str_replace("'","''",$values[$k]);
+        }
 	}
 	//print_r($fields);print_r($values);
 	$sql .= "(" . implode(',',$fields) . ") values ('" . implode("','",$values) . "')";

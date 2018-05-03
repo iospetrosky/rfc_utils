@@ -1,0 +1,5 @@
+{
+  "tabname": "AGR_USERS",
+  "tabfields": "AGR_NAME,UNAME,COL_FLAG",
+  "filters": ["AGR_NAME LIKE '_:%'"]
+}

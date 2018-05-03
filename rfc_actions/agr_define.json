@@ -1,0 +1,5 @@
+{
+  "tabname": "AGR_DEFINE",
+  "tabfields": "AGR_NAME,PARENT_AGR",
+  "filters": ["AGR_NAME LIKE '_:%'"]
+}

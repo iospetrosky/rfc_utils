@@ -1,0 +1,5 @@
+{
+  "tabname": "AGR_PROF",
+  "tabfields": "AGR_NAME,PROFILE",
+  "filters": ["AGR_NAME LIKE '_:%' AND LANGU EQ 'EN'"]
+}

@@ -1,5 +1,5 @@
 {
   "tabname": "AGR_TEXTS",
   "tabfields": "AGR_NAME,TEXT",
-  "filters": ["AGR_NAME LIKE 'R:XX%' AND SPRAS EQ 'EN' AND LINE < 1"]
+  "filters": ["AGR_NAME LIKE '_:%' AND SPRAS EQ 'EN' AND LINE < 1", "AGR_NAME LIKE '_+%' AND SPRAS EQ 'EN' AND LINE < 1" ]
 }
