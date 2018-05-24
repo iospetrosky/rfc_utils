@@ -1,6 +1,6 @@
 <?php
 //include_once("../lib2/file.php");
-require_once("../lib2/my_pdo.php");
+require_once("inc/my_pdo.php");
 require_once("inc/local_db.php");
 require_once("inc/saprfc.php");
 
@@ -29,6 +29,7 @@ $db = new MsdReader($sap_system,$sap_client);
 $action= new stdClass();
 $action->tabname = "E070";
 $action->tabfields = "TRKORR,STRKORR";
+//separate filter rows with a #
 $action->filter = "STRKORR EQ '$tr_id'";
 
 $start_row = 0;
@@ -36,7 +37,18 @@ $start_row = 0;
 //$db->exec("delete from E070 where STRKORR = '$tr_id'");
 
 $read_row = RFC_CALL($action,$start_row);
-echo "Transport tasks identified \n";
+echo "Transport task identified \n";
+
+$action->tabname = "E07T";
+$action->tabfields = "TRKORR,AS4TEXT";
+//separate filter rows with a #
+$action->filter = "TRKORR EQ '$tr_id' AND LANGU EQ 'EN'";
+
+$read_row = RFC_CALL($action,$start_row);
+echo "Transport text identified \n";
+
+
+
 
 $tasks = $db->column("select TRKORR from E070 where STRKORR = '$tr_id'","TRKORR");
 //print_r($tasks);
@@ -59,7 +71,7 @@ foreach($tasks as $task) {
 
 function RFC_CALL($tabdata,$skip) {
 	global $db;
-	global $sap_system,$sap_client,$sap_pass;
+	global $sap_system,$sap_client/*,$sap_pass*/;
 
 	$rows=0;
 

@@ -22,6 +22,9 @@ class my_pdo extends PDO {
 				//parent::__construct("DRIVER={HDBODBC32};UID=$pdo_user;PWD=$pdo_password; SERVERNODE=qlctcst7000:32115;DATABASENAME=DL1");
 				parent::__construct("odbc:DL1","pedrotti","Feder1c0");
 				break;
+            case 'msacc' : // MS Access
+				parent::__construct("odbc:DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=$pdo_host;Uid=Admin");
+				break;
 
 		}
 	}

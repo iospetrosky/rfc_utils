@@ -82,10 +82,10 @@ $release = 'CA8';
 $system = 'ECC';
 
 
-$sys = 'DR1300';
+$sys = 'DC1100';
 
-$akce = 'NEW_ROLES';
-//$akce = 'EXIST_ROLES';
+//$akce = 'NEW_ROLES';
+$akce = 'EXIST_ROLES';
 
 $wshell = new WShell();
 echo "5 seconds to activate the target application\n";
